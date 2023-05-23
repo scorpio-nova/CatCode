@@ -12,11 +12,11 @@ This repo has contained the complete evaluation process on the following aspects
 
 ## Platform Pipeline
 
-Using categorical perspective to formulate different tasks,  share a standard pipeline as the Figure 2:
+Using categorical perspective to formulate different tasks,  share a standard pipeline as follows:
 
-![platform_pipeline](./diagrams/platform_pipeline.png)
+<img src="./diagrams/platform_pipeline.png" alt="platform_pipeline" style="zoom:50%;" />
 
-​															(Figure 2)
+
 
 In this repository, we have the following data and code directories:
 
