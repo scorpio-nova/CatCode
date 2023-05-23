@@ -1,0 +1,2015 @@
+{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:37 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean hasCloseElements(List<Double> numbers, double threshold) {\n      for (int i = 0; i < numbers.size(); i++) {\n          for (int j = i + 1; j < numbers.size(); j++) {\n              double distance = Math.abs(numbers.get(i) - numbers.get(j));\n              if (distance < threshold)\n                  return true;\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "from typing import List\ndef hasCloseElements(numbers: List[float], threshold: float) -> bool:\n    return any(abs(numbers[i] - numbers[j]) < threshold for i in range(len(numbers) - 1) for j in range(i + 1, len(numbers)))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean hasCloseElements(List<Double> numbers, double threshold) {\n      for (int i = 0; i < numbers.size(); i++) {\n          for (int j = i + 1; j < numbers.size(); j++) {\n              double distance = Math.abs(numbers.get(i) - numbers.get(j));\n              if (distance < threshold)\n                  return true;\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -5.393287181854248,
+                    "generated": "from typing import List\ndef hasCloseElements(numbers: List[float], threshold: float) -> bool:\n    return any(abs(numbers[i] - numbers[j]) < threshold for i in range(len(numbers) - 1) for j in range(i + 1, len(numbers)))"
+                }
+            ],
+            "completion_token_num": 71,
+            "errcode": 0,
+            "prompt_token_num": 134
+        },
+        "process_time": 0.9567923545837402,
+        "task_id": "645676d5ad58a5c55889eecd",
+        "updated_at": "Sat, 06 May 2023 15:48:38 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 0
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:39 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> separateParenGroups(String paren_string) {\n      List<String> result = new ArrayList<>();\n      StringBuilder current_string = new StringBuilder();\n      int current_depth = 0;\n      for (char c : paren_string.toCharArray()) {\n          if (c == '(') {\n              current_depth += 1;\n              current_string.append(c);\n          } else if (c == ')') {\n              current_depth -= 1;\n              current_string.append(c);\n              if (current_depth == 0) {\n                  result.add(current_string.toString());\n                  current_string.setLength(0);\n              }\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def separateParenGroups(s):\n    for i in range(len(s)):\n        if (s[i] == \"(\"):\n            s = s[:i] + \"(\" + s[i+1:]\n            s = separateParenGroups(s)\n        elif (s[i] == \")\"):\n            if (i > 0):\n                s = s[:i-1] + \")\" + s[i+1:]\n                s = separateParenGroups(s)\n            else:\n                s = \"ERROR\"\n    return s"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> separateParenGroups(String paren_string) {\n      List<String> result = new ArrayList<>();\n      StringBuilder current_string = new StringBuilder();\n      int current_depth = 0;\n      for (char c : paren_string.toCharArray()) {\n          if (c == '(') {\n              current_depth += 1;\n              current_string.append(c);\n          } else if (c == ')') {\n              current_depth -= 1;\n              current_string.append(c);\n              if (current_depth == 0) {\n                  result.add(current_string.toString());\n                  current_string.setLength(0);\n              }\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -34.00828552246094,
+                    "generated": "def separateParenGroups(s):\n    for i in range(len(s)):\n        if (s[i] == \"(\"):\n            s = s[:i] + \"(\" + s[i+1:]\n            s = separateParenGroups(s)\n        elif (s[i] == \")\"):\n            if (i > 0):\n                s = s[:i-1] + \")\" + s[i+1:]\n                s = separateParenGroups(s)\n            else:\n                s = \"ERROR\"\n    return s"
+                }
+            ],
+            "completion_token_num": 140,
+            "errcode": 0,
+            "prompt_token_num": 214
+        },
+        "process_time": 1.899151086807251,
+        "task_id": "645676d7486ee51c5cfb844c",
+        "updated_at": "Sat, 06 May 2023 15:48:40 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 1
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:41 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public double truncateNumber(double number) {\n      return number % 1.0;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def truncateNumber(number):\n    return round(number, 1)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public double truncateNumber(double number) {\n      return number % 1.0;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.7617077827453613,
+                    "generated": "def truncateNumber(number):\n    return round(number, 1)"
+                }
+            ],
+            "completion_token_num": 16,
+            "errcode": 0,
+            "prompt_token_num": 48
+        },
+        "process_time": 0.2412405014038086,
+        "task_id": "645676d99e6e5981a2f46d72",
+        "updated_at": "Sat, 06 May 2023 15:48:41 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 2
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:41 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean belowZero(List<Integer> operations) {\n      int balance = 0;\n      for (int op : operations) {\n          balance += op;\n          if (balance < 0) {\n              return true;\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def belowZero(operations):\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean belowZero(List<Integer> operations) {\n      int balance = 0;\n      for (int op : operations) {\n          balance += op;\n          if (balance < 0) {\n              return true;\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -1.8642168045043945,
+                    "generated": "def belowZero(operations):\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"
+                }
+            ],
+            "completion_token_num": 40,
+            "errcode": 0,
+            "prompt_token_num": 90
+        },
+        "process_time": 0.5223350524902344,
+        "task_id": "645676d914440e07c4f46b51",
+        "updated_at": "Sat, 06 May 2023 15:48:41 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 3
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:41 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public double meanAbsoluteDeviation(List<Double> numbers) {\n      double sum = 0.0;\n      for (double num : numbers) {\n          sum += num;\n      }\n      double mean = sum / numbers.size();\n      double sum_abs_diff = 0.0;\n      for (double num : numbers) {\n          sum_abs_diff += Math.abs(num - mean);\n      }\n      return sum_abs_diff / numbers.size();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def meanAbsoluteDeviation(numbers):\n    res, i = 0, 0\n    while i < len(numbers):\n        res += abs(numbers[i] - numbers[i - 1])\n        i += 1\n    return res / len(numbers)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public double meanAbsoluteDeviation(List<Double> numbers) {\n      double sum = 0.0;\n      for (double num : numbers) {\n          sum += num;\n      }\n      double mean = sum / numbers.size();\n      double sum_abs_diff = 0.0;\n      for (double num : numbers) {\n          sum_abs_diff += Math.abs(num - mean);\n      }\n      return sum_abs_diff / numbers.size();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -11.030118942260742,
+                    "generated": "def meanAbsoluteDeviation(numbers):\n    res, i = 0, 0\n    while i < len(numbers):\n        res += abs(numbers[i] - numbers[i - 1])\n        i += 1\n    return res / len(numbers)"
+                }
+            ],
+            "completion_token_num": 62,
+            "errcode": 0,
+            "prompt_token_num": 138
+        },
+        "process_time": 0.8257811069488525,
+        "task_id": "645676d96022dd21e1fdd74e",
+        "updated_at": "Sat, 06 May 2023 15:48:42 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 4
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:42 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> intersperse(List<Integer> numbers, int delimiter) {\n      if (numbers.size() == 0) {\n          return List.of();\n      }\n      List<Integer> result = new ArrayList<>(List.of());\n      for (int i = 0; i < numbers.size() - 1; i++) {\n          result.add(numbers.get(i));\n          result.add(delimiter);\n      }\n      result.add(numbers.get(numbers.size() - 1));\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def intersperse(numbers, delimiter):\n    return [x for x in numbers[:-1] + [delimiter] if x!= delimiter] + [numbers[-1]]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> intersperse(List<Integer> numbers, int delimiter) {\n      if (numbers.size() == 0) {\n          return List.of();\n      }\n      List<Integer> result = new ArrayList<>(List.of());\n      for (int i = 0; i < numbers.size() - 1; i++) {\n          result.add(numbers.get(i));\n          result.add(delimiter);\n      }\n      result.add(numbers.get(numbers.size() - 1));\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -11.292745590209961,
+                    "generated": "def intersperse(numbers, delimiter):\n    return [x for x in numbers[:-1] + [delimiter] if x!= delimiter] + [numbers[-1]]"
+                }
+            ],
+            "completion_token_num": 44,
+            "errcode": 0,
+            "prompt_token_num": 160
+        },
+        "process_time": 0.6115939617156982,
+        "task_id": "645676da6022dd21e1fdd751",
+        "updated_at": "Sat, 06 May 2023 15:48:43 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 5
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:43 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> parseNestedParens(String paren_string) {\n      String[] groups = paren_string.split(\" \");\n      List<Integer> result = new ArrayList<>(List.of());\n      for (String group : groups) {\n          if (group.length() > 0) {\n              int depth = 0;\n              int max_depth = 0;\n              for (char c : group.toCharArray()) {\n                  if (c == '(') {\n                      depth += 1;\n                      max_depth = Math.max(depth, max_depth);\n                  } else {\n                      depth -= 1;\n                  }\n              }\n              result.add(max_depth);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "from typing import List\ndef parseNestedParens(paren_string: str) -> List[int]:\n    paren_stack, res = [], []\n    for c in paren_string:\n        if c == \")\":\n            if paren_stack and paren_stack[-1] == \"(\":\n                paren_stack.pop()\n            else:\n                res.append(0)\n        else:\n            paren_stack.append(c)\n    return res"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> parseNestedParens(String paren_string) {\n      String[] groups = paren_string.split(\" \");\n      List<Integer> result = new ArrayList<>(List.of());\n      for (String group : groups) {\n          if (group.length() > 0) {\n              int depth = 0;\n              int max_depth = 0;\n              for (char c : group.toCharArray()) {\n                  if (c == '(') {\n                      depth += 1;\n                      max_depth = Math.max(depth, max_depth);\n                  } else {\n                      depth -= 1;\n                  }\n              }\n              result.add(max_depth);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -17.71351432800293,
+                    "generated": "from typing import List\ndef parseNestedParens(paren_string: str) -> List[int]:\n    paren_stack, res = [], []\n    for c in paren_string:\n        if c == \")\":\n            if paren_stack and paren_stack[-1] == \"(\":\n                paren_stack.pop()\n            else:\n                res.append(0)\n        else:\n            paren_stack.append(c)\n    return res"
+                }
+            ],
+            "completion_token_num": 115,
+            "errcode": 0,
+            "prompt_token_num": 216
+        },
+        "process_time": 1.547720193862915,
+        "task_id": "645676db486ee51c5cfb844f",
+        "updated_at": "Sat, 06 May 2023 15:48:45 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 6
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:45 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> filterBySubstring(List<String> strings, String substring) {\n      List<String> result = new ArrayList<>();\n      for (String x : strings) {\n          if (x.contains(substring)) {\n              result.add(x);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def filterBySubstring(strings, substring):\n    return [s for s in strings if substring in s]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> filterBySubstring(List<String> strings, String substring) {\n      List<String> result = new ArrayList<>();\n      for (String x : strings) {\n          if (x.contains(substring)) {\n              result.add(x);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -1.8499493598937988,
+                    "generated": "def filterBySubstring(strings, substring):\n    return [s for s in strings if substring in s]"
+                }
+            ],
+            "completion_token_num": 26,
+            "errcode": 0,
+            "prompt_token_num": 107
+        },
+        "process_time": 0.3586251735687256,
+        "task_id": "645676dd6022dd21e1fdd753",
+        "updated_at": "Sat, 06 May 2023 15:48:45 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 7
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:45 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sumProduct(List<Integer> numbers) {\n      int sum = 0;\n      int product = 1;\n      for (int n : numbers) {\n          sum += n;\n          product *= n;\n      }\n      return Arrays.asList(sum, product);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def sumProduct(numbers):\n    sm = 0\n    pro = 1\n    for n in numbers:\n        sm += n\n        pro *= n\n    return [sm, pro]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sumProduct(List<Integer> numbers) {\n      int sum = 0;\n      int product = 1;\n      for (int n : numbers) {\n          sum += n;\n          product *= n;\n      }\n      return Arrays.asList(sum, product);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -5.583353519439697,
+                    "generated": "def sumProduct(numbers):\n    sm = 0\n    pro = 1\n    for n in numbers:\n        sm += n\n        pro *= n\n    return [sm, pro]"
+                }
+            ],
+            "completion_token_num": 43,
+            "errcode": 0,
+            "prompt_token_num": 97
+        },
+        "process_time": 0.5614638328552246,
+        "task_id": "645676dd3c5a47cfe6955ae4",
+        "updated_at": "Sat, 06 May 2023 15:48:46 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 8
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:46 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> rollingMax(List<Integer> numbers) {\n      List<Integer> result = new ArrayList<>();\n      if (numbers.size() == 0) {\n          return result;\n      }\n      int rollingMax = numbers.get(0);\n      result.add(rollingMax);\n      for (int i = 1; i < numbers.size(); i++) {\n          if (numbers.get(i) > rollingMax) {\n              rollingMax = numbers.get(i);\n          }\n          result.add(rollingMax);\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def rollingMax(numbers, k):\n    res = [numbers[0]]\n    for i in range(1, len(numbers), 1):\n        if i + k - 1 < len(numbers):\n            res.append(max(res[-1], numbers[i + k - 1]))\n        else:\n            res.append(res[-1])\n    return res[k - 1:]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> rollingMax(List<Integer> numbers) {\n      List<Integer> result = new ArrayList<>();\n      if (numbers.size() == 0) {\n          return result;\n      }\n      int rollingMax = numbers.get(0);\n      result.add(rollingMax);\n      for (int i = 1; i < numbers.size(); i++) {\n          if (numbers.get(i) > rollingMax) {\n              rollingMax = numbers.get(i);\n          }\n          result.add(rollingMax);\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -16.887636184692383,
+                    "generated": "def rollingMax(numbers, k):\n    res = [numbers[0]]\n    for i in range(1, len(numbers), 1):\n        if i + k - 1 < len(numbers):\n            res.append(max(res[-1], numbers[i + k - 1]))\n        else:\n            res.append(res[-1])\n    return res[k - 1:]"
+                }
+            ],
+            "completion_token_num": 97,
+            "errcode": 0,
+            "prompt_token_num": 166
+        },
+        "process_time": 2.1675689220428467,
+        "task_id": "645676debdf1a2ad40efddc4",
+        "updated_at": "Sat, 06 May 2023 15:48:48 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 9
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:48 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPalindrome(String string) {\n      int i = 0;\n      int j = string.length() - 1;\n      while (i < j) {\n          if (string.charAt(i) != string.charAt(j)) {\n              return false;\n          }\n          i++;\n          j--;\n      }\n      return true;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def isPalindrome(s):\n    s = ''.join(c for c in s if c.isalnum())\n    return s == s[::-1]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPalindrome(String string) {\n      int i = 0;\n      int j = string.length() - 1;\n      while (i < j) {\n          if (string.charAt(i) != string.charAt(j)) {\n              return false;\n          }\n          i++;\n          j--;\n      }\n      return true;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -6.344817161560059,
+                    "generated": "def isPalindrome(s):\n    s = ''.join(c for c in s if c.isalnum())\n    return s == s[::-1]"
+                }
+            ],
+            "completion_token_num": 38,
+            "errcode": 0,
+            "prompt_token_num": 114
+        },
+        "process_time": 1.0552237033843994,
+        "task_id": "645676e0cba8161fc9f46a3d",
+        "updated_at": "Sat, 06 May 2023 15:48:49 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 10
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:49 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String stringXor(String a, String b) {\n      StringBuilder result = new StringBuilder();\n      for (int i = 0; i < a.length(); i++) {\n          if (a.charAt(i) == b.charAt(i)) {\n              result.append(\"0\");\n          } else {\n              result.append(\"1\");\n          }\n      }\n      return result.toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def stringXor(a, b):\n    return ''.join(chr(ord(a[i]) ^ ord(b[i])) for i in range(len(a)))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String stringXor(String a, String b) {\n      StringBuilder result = new StringBuilder();\n      for (int i = 0; i < a.length(); i++) {\n          if (a.charAt(i) == b.charAt(i)) {\n              result.append(\"0\");\n          } else {\n              result.append(\"1\");\n          }\n      }\n      return result.toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.109912633895874,
+                    "generated": "def stringXor(a, b):\n    return ''.join(chr(ord(a[i]) ^ ord(b[i])) for i in range(len(a)))"
+                }
+            ],
+            "completion_token_num": 42,
+            "errcode": 0,
+            "prompt_token_num": 127
+        },
+        "process_time": 1.0859439373016357,
+        "task_id": "645676e17d2da67c51956335",
+        "updated_at": "Sat, 06 May 2023 15:48:50 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 11
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:50 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public Optional<String> longest(List<String> strings) {\n      if (strings.isEmpty()) {\n          return Optional.empty();\n      }\n      String longest = strings.get(0);\n      for (String s : strings) {\n          if (s.length() > longest.length()) {\n              longest = s;\n          }\n      }\n      return Optional.of(longest);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import re\ndef longest(strings):\n    return max(strings, key = len) if strings else \"\""
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public Optional<String> longest(List<String> strings) {\n      if (strings.isEmpty()) {\n          return Optional.empty();\n      }\n      String longest = strings.get(0);\n      for (String s : strings) {\n          if (s.length() > longest.length()) {\n              longest = s;\n          }\n      }\n      return Optional.of(longest);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -7.386649131774902,
+                    "generated": "import re\ndef longest(strings):\n    return max(strings, key = len) if strings else \"\""
+                }
+            ],
+            "completion_token_num": 23,
+            "errcode": 0,
+            "prompt_token_num": 122
+        },
+        "process_time": 0.7122170925140381,
+        "task_id": "645676e22fd3a94414fddc81",
+        "updated_at": "Sat, 06 May 2023 15:48:51 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 12
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:51 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int greatestCommonDivisor(int a, int b) {\n      if (a == 0 || b == 0) {\n          return a + b;\n      }\n      if (a == b) {\n          return a;\n      }\n      if (a > b) {\n          return greatestCommonDivisor(a % b, b);\n      } else {\n          return greatestCommonDivisor(a, b % a);\n      }\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def greatestCommonDivisor(a, b):\n    while(b!= 0):\n        temp = b\n        b = a % b\n        a = temp\n    return a"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int greatestCommonDivisor(int a, int b) {\n      if (a == 0 || b == 0) {\n          return a + b;\n      }\n      if (a == b) {\n          return a;\n      }\n      if (a > b) {\n          return greatestCommonDivisor(a % b, b);\n      } else {\n          return greatestCommonDivisor(a, b % a);\n      }\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -6.3952860832214355,
+                    "generated": "def greatestCommonDivisor(a, b):\n    while(b!= 0):\n        temp = b\n        b = a % b\n        a = temp\n    return a"
+                }
+            ],
+            "completion_token_num": 40,
+            "errcode": 0,
+            "prompt_token_num": 131
+        },
+        "process_time": 1.1850876808166504,
+        "task_id": "645676e36728764704fb890a",
+        "updated_at": "Sat, 06 May 2023 15:48:52 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 13
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:53 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> allPrefixes(String string) {\n      List<String> result = new ArrayList<>();\n      for (int i = 1; i <= string.length(); i++) {\n          result.add(string.substring(0, i));\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def allPrefixes(s):\n    res = []\n    for i in range(1, len(s) + 1):\n        res.append(s[:i])\n    return res"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> allPrefixes(String string) {\n      List<String> result = new ArrayList<>();\n      for (int i = 1; i <= string.length(); i++) {\n          result.add(string.substring(0, i));\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.7723753452301025,
+                    "generated": "def allPrefixes(s):\n    res = []\n    for i in range(1, len(s) + 1):\n        res.append(s[:i])\n    return res"
+                }
+            ],
+            "completion_token_num": 44,
+            "errcode": 0,
+            "prompt_token_num": 98
+        },
+        "process_time": 0.5769386291503906,
+        "task_id": "645676e5f48361a967f471ad",
+        "updated_at": "Sat, 06 May 2023 15:48:53 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 14
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:53 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String stringSequence(int n) {\n      StringBuilder sb = new StringBuilder();\n      for (int i = 0; i < n; i++) {\n          sb.append(i);\n          sb.append(\" \");\n      }\n      sb.append(n);\n      return sb.toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def stringSequence(n):\n    sb=\"\"\n    for i in range(n):\n        sb+=str(i)\n        sb+=\" \"\n    sb+=str(n)\n    return sb"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String stringSequence(int n) {\n      StringBuilder sb = new StringBuilder();\n      for (int i = 0; i < n; i++) {\n          sb.append(i);\n          sb.append(\" \");\n      }\n      sb.append(n);\n      return sb.toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -8.306678771972656,
+                    "generated": "def stringSequence(n):\n    sb=\"\"\n    for i in range(n):\n        sb+=str(i)\n        sb+=\" \"\n    sb+=str(n)\n    return sb"
+                }
+            ],
+            "completion_token_num": 47,
+            "errcode": 0,
+            "prompt_token_num": 102
+        },
+        "process_time": 0.6112487316131592,
+        "task_id": "645676e5486ee51c5cfb8455",
+        "updated_at": "Sat, 06 May 2023 15:48:54 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 15
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:54 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int countDistinctCharacters(String string) {\n      Set<Character> set = new HashSet<>();\n      for (char c : string.toLowerCase().toCharArray()) {\n          set.add(c);\n      }\n      return set.size();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def countDistinctCharacters(s):\n    s = s.lower()\n    return len(set(s))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int countDistinctCharacters(String string) {\n      Set<Character> set = new HashSet<>();\n      for (char c : string.toLowerCase().toCharArray()) {\n          set.add(c);\n      }\n      return set.size();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -5.373284339904785,
+                    "generated": "def countDistinctCharacters(s):\n    s = s.lower()\n    return len(set(s))"
+                }
+            ],
+            "completion_token_num": 25,
+            "errcode": 0,
+            "prompt_token_num": 90
+        },
+        "process_time": 0.35120701789855957,
+        "task_id": "645676e6f91776fc8489e32a",
+        "updated_at": "Sat, 06 May 2023 15:48:54 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 16
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:54 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> parseMusic(String string) {\n      String[] notes = string.split(\" \");\n      List<Integer> result = new ArrayList<>();\n      for (String s : notes) {\n          switch(s) {\n              case \"o\" ->\n                  result.add(4);\n              case \"o|\" ->\n                  result.add(2);\n              case \".|\" ->\n                  result.add(1);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import collections\ndef parseMusic(s):\n    return [4,2,1] if s == 'o' else [1,2,4]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> parseMusic(String string) {\n      String[] notes = string.split(\" \");\n      List<Integer> result = new ArrayList<>();\n      for (String s : notes) {\n          switch(s) {\n              case \"o\" ->\n                  result.add(4);\n              case \"o|\" ->\n                  result.add(2);\n              case \".|\" ->\n                  result.add(1);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -18.67129898071289,
+                    "generated": "import collections\ndef parseMusic(s):\n    return [4,2,1] if s == 'o' else [1,2,4]"
+                }
+            ],
+            "completion_token_num": 33,
+            "errcode": 0,
+            "prompt_token_num": 147
+        },
+        "process_time": 0.48187732696533203,
+        "task_id": "645676e659bb49afb989df39",
+        "updated_at": "Sat, 06 May 2023 15:48:55 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 17
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:55 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int howManyTimes(String string, String substring) {\n      int times = 0;\n      for (int i = 0; i < string.length() - substring.length() + 1; i++) {\n          if (string.substring(i, i + substring.length()).equals(substring)) {\n              times += 1;\n          }\n      }\n      return times;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def howManyTimes(str, sub):\n    return sum([1 for i in range(len(str) - len(sub) + 1) if str[i:i + len(sub)] == sub])"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int howManyTimes(String string, String substring) {\n      int times = 0;\n      for (int i = 0; i < string.length() - substring.length() + 1; i++) {\n          if (string.substring(i, i + substring.length()).equals(substring)) {\n              times += 1;\n          }\n      }\n      return times;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -8.02484130859375,
+                    "generated": "def howManyTimes(str, sub):\n    return sum([1 for i in range(len(str) - len(sub) + 1) if str[i:i + len(sub)] == sub])"
+                }
+            ],
+            "completion_token_num": 46,
+            "errcode": 0,
+            "prompt_token_num": 121
+        },
+        "process_time": 0.6184675693511963,
+        "task_id": "645676e7b8d4322dfe806065",
+        "updated_at": "Sat, 06 May 2023 15:48:56 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 18
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:56 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String sortNumbers(String numbers) {\n      String[] nums = numbers.split(\" \");\n      List<Integer> num = new ArrayList<>();\n      for (String string : nums) {\n          switch(string) {\n              case \"zero\" ->\n                  num.add(0);\n              case \"one\" ->\n                  num.add(1);\n              case \"two\" ->\n                  num.add(2);\n              case \"three\" ->\n                  num.add(3);\n              case \"four\" ->\n                  num.add(4);\n              case \"five\" ->\n                  num.add(5);\n              case \"six\" ->\n                  num.add(6);\n              case \"seven\" ->\n                  num.add(7);\n              case \"eight\" ->\n                  num.add(8);\n              case \"nine\" ->\n                  num.add(9);\n          }\n      }\n      Collections.sort(num);\n      List<String> result = new ArrayList<>();\n      for (int m : num) {\n          switch(m) {\n              case 0 ->\n                  result.add(\"zero\");\n              case 1 ->\n                  result.add(\"one\");\n              case 2 ->\n                  result.add(\"two\");\n              case 3 ->\n                  result.add(\"three\");\n              case 4 ->\n                  result.add(\"four\");\n              case 5 ->\n                  result.add(\"five\");\n              case 6 ->\n                  result.add(\"six\");\n              case 7 ->\n                  result.add(\"seven\");\n              case 8 ->\n                  result.add(\"eight\");\n              case 9 ->\n                  result.add(\"nine\");\n          }\n      }\n      return String.join(\" \", result);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def sortNumbers(numbers):\n    sorted_nums = sorted(numbers.split())\n    return \" \".join(sorted_nums)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String sortNumbers(String numbers) {\n      String[] nums = numbers.split(\" \");\n      List<Integer> num = new ArrayList<>();\n      for (String string : nums) {\n          switch(string) {\n              case \"zero\" ->\n                  num.add(0);\n              case \"one\" ->\n                  num.add(1);\n              case \"two\" ->\n                  num.add(2);\n              case \"three\" ->\n                  num.add(3);\n              case \"four\" ->\n                  num.add(4);\n              case \"five\" ->\n                  num.add(5);\n              case \"six\" ->\n                  num.add(6);\n              case \"seven\" ->\n                  num.add(7);\n              case \"eight\" ->\n                  num.add(8);\n              case \"nine\" ->\n                  num.add(9);\n          }\n      }\n      Collections.sort(num);\n      List<String> result = new ArrayList<>();\n      for (int m : num) {\n          switch(m) {\n              case 0 ->\n                  result.add(\"zero\");\n              case 1 ->\n                  result.add(\"one\");\n              case 2 ->\n                  result.add(\"two\");\n              case 3 ->\n                  result.add(\"three\");\n              case 4 ->\n                  result.add(\"four\");\n              case 5 ->\n                  result.add(\"five\");\n              case 6 ->\n                  result.add(\"six\");\n              case 7 ->\n                  result.add(\"seven\");\n              case 8 ->\n                  result.add(\"eight\");\n              case 9 ->\n                  result.add(\"nine\");\n          }\n      }\n      return String.join(\" \", result);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -10.64758014678955,
+                    "generated": "def sortNumbers(numbers):\n    sorted_nums = sorted(numbers.split())\n    return \" \".join(sorted_nums)"
+                }
+            ],
+            "completion_token_num": 35,
+            "errcode": 0,
+            "prompt_token_num": 465
+        },
+        "process_time": 0.6149661540985107,
+        "task_id": "645676e8d14d607439fdd7cc",
+        "updated_at": "Sat, 06 May 2023 15:48:57 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 19
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:57 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Double> findClosestElements(List<Double> numbers) {\n      List<Double> closest_pair = new ArrayList<>();\n      closest_pair.add(numbers.get(0));\n      closest_pair.add(numbers.get(1));\n      double distance = Math.abs(numbers.get(1) - numbers.get(0));\n      for (int i = 0; i < numbers.size(); i++) {\n          for (int j = i + 1; j < numbers.size(); j++) {\n              if (Math.abs(numbers.get(i) - numbers.get(j)) < distance) {\n                  closest_pair.clear();\n                  closest_pair.add(numbers.get(i));\n                  closest_pair.add(numbers.get(j));\n                  distance = Math.abs(numbers.get(i) - numbers.get(j));\n              }\n          }\n      }\n      Collections.sort(closest_pair);\n      return closest_pair;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def findClosestElements(nums, k):\n    return sorted(nums)[:k]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Double> findClosestElements(List<Double> numbers) {\n      List<Double> closest_pair = new ArrayList<>();\n      closest_pair.add(numbers.get(0));\n      closest_pair.add(numbers.get(1));\n      double distance = Math.abs(numbers.get(1) - numbers.get(0));\n      for (int i = 0; i < numbers.size(); i++) {\n          for (int j = i + 1; j < numbers.size(); j++) {\n              if (Math.abs(numbers.get(i) - numbers.get(j)) < distance) {\n                  closest_pair.clear();\n                  closest_pair.add(numbers.get(i));\n                  closest_pair.add(numbers.get(j));\n                  distance = Math.abs(numbers.get(i) - numbers.get(j));\n              }\n          }\n      }\n      Collections.sort(closest_pair);\n      return closest_pair;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -3.3100950717926025,
+                    "generated": "def findClosestElements(nums, k):\n    return sorted(nums)[:k]"
+                }
+            ],
+            "completion_token_num": 24,
+            "errcode": 0,
+            "prompt_token_num": 286
+        },
+        "process_time": 0.4013857841491699,
+        "task_id": "645676e9cba8161fc9f46a3f",
+        "updated_at": "Sat, 06 May 2023 15:48:57 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 20
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:57 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Double> rescaleToUnit(List<Double> numbers) {\n      double min_number = Collections.min(numbers);\n      double max_number = Collections.max(numbers);\n      List<Double> result = new ArrayList<>();\n      for (double x : numbers) {\n          result.add((x - min_number) / (max_number - min_number));\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def rescaleToUnit(numbers):\n    return [x / max(numbers) - 1 for x in numbers]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Double> rescaleToUnit(List<Double> numbers) {\n      double min_number = Collections.min(numbers);\n      double max_number = Collections.max(numbers);\n      List<Double> result = new ArrayList<>();\n      for (double x : numbers) {\n          result.add((x - min_number) / (max_number - min_number));\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -4.633105278015137,
+                    "generated": "def rescaleToUnit(numbers):\n    return [x / max(numbers) - 1 for x in numbers]"
+                }
+            ],
+            "completion_token_num": 27,
+            "errcode": 0,
+            "prompt_token_num": 128
+        },
+        "process_time": 0.3812289237976074,
+        "task_id": "645676e9b8d4322dfe806066",
+        "updated_at": "Sat, 06 May 2023 15:48:58 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 21
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:58 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> filterIntergers(List<Object> values) {\n      List<Integer> result = new ArrayList<>();\n      for (Object x : values) {\n          if (x instanceof Integer) {\n              result.add((Integer) x);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def filterIntergers(values):\n    return list(filter(lambda x: isinstance(x, int), values))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> filterIntergers(List<Object> values) {\n      List<Integer> result = new ArrayList<>();\n      for (Object x : values) {\n          if (x instanceof Integer) {\n              result.add((Integer) x);\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -3.4327330589294434,
+                    "generated": "def filterIntergers(values):\n    return list(filter(lambda x: isinstance(x, int), values))"
+                }
+            ],
+            "completion_token_num": 26,
+            "errcode": 0,
+            "prompt_token_num": 101
+        },
+        "process_time": 0.37313032150268555,
+        "task_id": "645676ea08e84dccc6efdb21",
+        "updated_at": "Sat, 06 May 2023 15:48:58 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 22
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:58 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int strlen(String string) {\n      return string.length();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def strlen(s):\n    return len(s)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int strlen(String string) {\n      return string.length();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -0.6163698434829712,
+                    "generated": "def strlen(s):\n    return len(s)"
+                }
+            ],
+            "completion_token_num": 13,
+            "errcode": 0,
+            "prompt_token_num": 45
+        },
+        "process_time": 0.19459319114685059,
+        "task_id": "645676eaced31cd8c0fb80f6",
+        "updated_at": "Sat, 06 May 2023 15:48:58 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 23
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:59 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int largestDivisor(int n) {\n      for (int i = n - 1; i > 0; i--) {\n          if (n % i == 0) {\n              return i;\n          }\n      }\n      return 1;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def largestDivisor (n):\n    for i in range(n - 1, 1, - 1):\n        if n % i == 0:\n            return i\nn = 100005\nprint(largestDivisor (n))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int largestDivisor(int n) {\n      for (int i = n - 1; i > 0; i--) {\n          if (n % i == 0) {\n              return i;\n          }\n      }\n      return 1;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -13.722938537597656,
+                    "generated": "def largestDivisor (n):\n    for i in range(n - 1, 1, - 1):\n        if n % i == 0:\n            return i\nn = 100005\nprint(largestDivisor (n))"
+                }
+            ],
+            "completion_token_num": 53,
+            "errcode": 0,
+            "prompt_token_num": 87
+        },
+        "process_time": 0.6801800727844238,
+        "task_id": "645676ebcba8161fc9f46a40",
+        "updated_at": "Sat, 06 May 2023 15:48:59 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 24
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:48:59 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> factorize(int n) {\n      List<Integer> fact = new ArrayList<>();\n      int i = 2;\n      while (n > 1) {\n          if (n % i == 0) {\n              fact.add(i);\n              n /= i;\n          } else {\n              i++;\n          }\n      }\n      return fact;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def factorize(n):\n    return [i for i in range(2, n + 1) if n % i == 0]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> factorize(int n) {\n      List<Integer> fact = new ArrayList<>();\n      int i = 2;\n      while (n > 1) {\n          if (n % i == 0) {\n              fact.add(i);\n              n /= i;\n          } else {\n              i++;\n          }\n      }\n      return fact;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -3.3499112129211426,
+                    "generated": "def factorize(n):\n    return [i for i in range(2, n + 1) if n % i == 0]"
+                }
+            ],
+            "completion_token_num": 29,
+            "errcode": 0,
+            "prompt_token_num": 120
+        },
+        "process_time": 0.40146708488464355,
+        "task_id": "645676ebbdf1a2ad40efddc6",
+        "updated_at": "Sat, 06 May 2023 15:49:00 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 25
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:00 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> removeDuplicates(List<Integer> numbers) {\n      Map<Integer, Integer> c = new HashMap<>();\n      for (int i : numbers) {\n          c.put(i, c.getOrDefault(i, 0) + 1);\n      }\n      return numbers.stream().filter(i -> c.get(i) == 1).collect(Collectors.toList());\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def removeDuplicates(nums):\n    return list(filter(lambda x: nums.count(x) == 1, nums))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> removeDuplicates(List<Integer> numbers) {\n      Map<Integer, Integer> c = new HashMap<>();\n      for (int i : numbers) {\n          c.put(i, c.getOrDefault(i, 0) + 1);\n      }\n      return numbers.stream().filter(i -> c.get(i) == 1).collect(Collectors.toList());\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -10.086341857910156,
+                    "generated": "def removeDuplicates(nums):\n    return list(filter(lambda x: nums.count(x) == 1, nums))"
+                }
+            ],
+            "completion_token_num": 32,
+            "errcode": 0,
+            "prompt_token_num": 124
+        },
+        "process_time": 0.43904805183410645,
+        "task_id": "645676ec9c6d3f81e4f4689c",
+        "updated_at": "Sat, 06 May 2023 15:49:00 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 26
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:01 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String flipCase(String string) {\n      StringBuilder sb = new StringBuilder();\n      for (int i = 0; i < string.length(); i++) {\n          if (Character.isLowerCase(string.charAt(i))) {\n              sb.append(Character.toUpperCase(string.charAt(i)));\n          } else {\n              sb.append(Character.toLowerCase(string.charAt(i)));\n          }\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def flipCase(s):\n    return ''.join(ch if ch.isupper() else ch.lower() for ch in s)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String flipCase(String string) {\n      StringBuilder sb = new StringBuilder();\n      for (int i = 0; i < string.length(); i++) {\n          if (Character.isLowerCase(string.charAt(i))) {\n              sb.append(Character.toUpperCase(string.charAt(i)));\n          } else {\n              sb.append(Character.toLowerCase(string.charAt(i)));\n          }\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -5.881523609161377,
+                    "generated": "def flipCase(s):\n    return ''.join(ch if ch.isupper() else ch.lower() for ch in s)"
+                }
+            ],
+            "completion_token_num": 30,
+            "errcode": 0,
+            "prompt_token_num": 148
+        },
+        "process_time": 0.4392735958099365,
+        "task_id": "645676ed3f6795b725f467db",
+        "updated_at": "Sat, 06 May 2023 15:49:01 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 27
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:01 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String concatenate(List<String> strings) {\n      return String.join(\"\", strings);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def concatenate(strings):\n    return ''.join(strings)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String concatenate(List<String> strings) {\n      return String.join(\"\", strings);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -1.3288819789886475,
+                    "generated": "def concatenate(strings):\n    return ''.join(strings)"
+                }
+            ],
+            "completion_token_num": 16,
+            "errcode": 0,
+            "prompt_token_num": 52
+        },
+        "process_time": 0.23147797584533691,
+        "task_id": "645676edd14d607439fdd7d0",
+        "updated_at": "Sat, 06 May 2023 15:49:01 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 28
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:02 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> filterByPrefix(List<String> strings, String prefix) {\n      return strings.stream().filter(p -> p.startsWith(prefix)).collect(Collectors.toList());\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "from typing import List\ndef filterByPrefix(strings: List[str], prefix: str) -> List[str]:\n    return [s for s in strings if s.startswith(prefix)]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<String> filterByPrefix(List<String> strings, String prefix) {\n      return strings.stream().filter(p -> p.startsWith(prefix)).collect(Collectors.toList());\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.2324767112731934,
+                    "generated": "from typing import List\ndef filterByPrefix(strings: List[str], prefix: str) -> List[str]:\n    return [s for s in strings if s.startswith(prefix)]"
+                }
+            ],
+            "completion_token_num": 44,
+            "errcode": 0,
+            "prompt_token_num": 76
+        },
+        "process_time": 0.5669639110565186,
+        "task_id": "645676eeced31cd8c0fb80f7",
+        "updated_at": "Sat, 06 May 2023 15:49:02 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 29
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:02 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> getPositive(List<Integer> l) {\n      return l.stream().filter(p -> p > 0).collect(Collectors.toList());\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import itertools\ndef getPositive(l):\n    return [1 if x > 0 else 0 for x in list(itertools.accumulate(l))]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> getPositive(List<Integer> l) {\n      return l.stream().filter(p -> p > 0).collect(Collectors.toList());\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -13.571267127990723,
+                    "generated": "import itertools\ndef getPositive(l):\n    return [1 if x > 0 else 0 for x in list(itertools.accumulate(l))]"
+                }
+            ],
+            "completion_token_num": 39,
+            "errcode": 0,
+            "prompt_token_num": 68
+        },
+        "process_time": 0.5103328227996826,
+        "task_id": "645676eee70fd10b7aefd4f5",
+        "updated_at": "Sat, 06 May 2023 15:49:03 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 30
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:03 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPrime(int n) {\n      if (n < 2) {\n          return false;\n      }\n      for (int k = 2; k < n; k++) {\n          if (n % k == 0) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def isPrime(n):\n    if n < 2:\n        return False\n    for k in range(2, n):\n        if n % k == 0:\n            return False\n    return True"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPrime(int n) {\n      if (n < 2) {\n          return false;\n      }\n      for (int k = 2; k < n; k++) {\n          if (n % k == 0) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.084825038909912,
+                    "generated": "def isPrime(n):\n    if n < 2:\n        return False\n    for k in range(2, n):\n        if n % k == 0:\n            return False\n    return True"
+                }
+            ],
+            "completion_token_num": 46,
+            "errcode": 0,
+            "prompt_token_num": 99
+        },
+        "process_time": 0.5988309383392334,
+        "task_id": "645676ef14440e07c4f46b5e",
+        "updated_at": "Sat, 06 May 2023 15:49:03 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 31
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:04 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public double poly(List<Double> xs, double x) {\n      double result = 0;\n      for (int i = 0; i < xs.size(); i++) {\n          result += xs.get(i) * Math.pow(x, i);\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def poly(xs, x):\n    res = 0\n    for i in range(len(xs)):\n        res += xs[i] * pow(x, i)\n    return res"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public double poly(List<Double> xs, double x) {\n      double result = 0;\n      for (int i = 0; i < xs.size(); i++) {\n          result += xs.get(i) * Math.pow(x, i);\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.1581544876098633,
+                    "generated": "def poly(xs, x):\n    res = 0\n    for i in range(len(xs)):\n        res += xs[i] * pow(x, i)\n    return res"
+                }
+            ],
+            "completion_token_num": 44,
+            "errcode": 0,
+            "prompt_token_num": 99
+        },
+        "process_time": 1.1434919834136963,
+        "task_id": "645676f01372543c2a805aa1",
+        "updated_at": "Sat, 06 May 2023 15:49:05 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 32
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:05 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sortThird(List<Integer> l) {\n      List<Integer> thirds = new ArrayList<>();\n      for (int i = 0; i < l.size(); i += 3) {\n          thirds.add(l.get(i));\n      }\n      Collections.sort(thirds);\n      List<Integer> result = l;\n      for (int i = 0; i < l.size(); i += 3) {\n          result.set(i, thirds.get(i / 3));\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def sortThird(l):\n    l.sort()\n    l.sort()\n    l.sort()\n    return l"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sortThird(List<Integer> l) {\n      List<Integer> thirds = new ArrayList<>();\n      for (int i = 0; i < l.size(); i += 3) {\n          thirds.add(l.get(i));\n      }\n      Collections.sort(thirds);\n      List<Integer> result = l;\n      for (int i = 0; i < l.size(); i += 3) {\n          result.set(i, thirds.get(i / 3));\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -4.28837251663208,
+                    "generated": "def sortThird(l):\n    l.sort()\n    l.sort()\n    l.sort()\n    return l"
+                }
+            ],
+            "completion_token_num": 28,
+            "errcode": 0,
+            "prompt_token_num": 156
+        },
+        "process_time": 0.8619792461395264,
+        "task_id": "645676f10d962db22c805dcd",
+        "updated_at": "Sat, 06 May 2023 15:49:06 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 33
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:06 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> unique(List<Integer> l) {\n      List<Integer> result = new ArrayList<>(new HashSet<>(l));\n      Collections.sort(result);\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import collections\ndef unique(l):\n    c = collections.Counter(l)\n    return [i for i in c]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> unique(List<Integer> l) {\n      List<Integer> result = new ArrayList<>(new HashSet<>(l));\n      Collections.sort(result);\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -7.15982723236084,
+                    "generated": "import collections\ndef unique(l):\n    c = collections.Counter(l)\n    return [i for i in c]"
+                }
+            ],
+            "completion_token_num": 28,
+            "errcode": 0,
+            "prompt_token_num": 77
+        },
+        "process_time": 0.7894339561462402,
+        "task_id": "645676f2486ee51c5cfb845e",
+        "updated_at": "Sat, 06 May 2023 15:49:07 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 34
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:07 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int maxElement(List<Integer> l) {\n      return Collections.max(l);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import collections\ndef maxElement(l):\n    return max(collections.Counter(l).values())"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int maxElement(List<Integer> l) {\n      return Collections.max(l);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -4.139918804168701,
+                    "generated": "import collections\ndef maxElement(l):\n    return max(collections.Counter(l).values())"
+                }
+            ],
+            "completion_token_num": 23,
+            "errcode": 0,
+            "prompt_token_num": 50
+        },
+        "process_time": 0.39809441566467285,
+        "task_id": "645676f308e84dccc6efdb27",
+        "updated_at": "Sat, 06 May 2023 15:49:07 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 35
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:07 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int fizzBuzz(int n) {\n      int result = 0;\n      for (int i = 1; i < n; i++) {\n          if (i % 11 == 0 || i % 13 == 0) {\n              char[] digits = String.valueOf(i).toCharArray();\n              for (char c : digits) {\n                  if (c == '7') {\n                      result += 1;\n                  }\n              }\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def fizzBuzz(n):\n    return [str(x) for x in range(1, n + 1) if not (x % 3 == 0 and x % 5 == 0) and not (x % 3 == 0 and x % 7 == 0)] or [\"FizzBuzz\"]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int fizzBuzz(int n) {\n      int result = 0;\n      for (int i = 1; i < n; i++) {\n          if (i % 11 == 0 || i % 13 == 0) {\n              char[] digits = String.valueOf(i).toCharArray();\n              for (char c : digits) {\n                  if (c == '7') {\n                      result += 1;\n                  }\n              }\n          }\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -16.524715423583984,
+                    "generated": "def fizzBuzz(n):\n    return [str(x) for x in range(1, n + 1) if not (x % 3 == 0 and x % 5 == 0) and not (x % 3 == 0 and x % 7 == 0)] or [\"FizzBuzz\"]"
+                }
+            ],
+            "completion_token_num": 62,
+            "errcode": 0,
+            "prompt_token_num": 146
+        },
+        "process_time": 0.8342461585998535,
+        "task_id": "645676f32a3d8c5802fdd227",
+        "updated_at": "Sat, 06 May 2023 15:49:08 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 36
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:08 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sortEven(List<Integer> l) {\n      List<Integer> even = new ArrayList<>();\n      for (int i = 0; i < l.size(); i += 2) {\n          even.add(l.get(i));\n      }\n      Collections.sort(even);\n      List<Integer> result = l;\n      for (int i = 0; i < l.size(); i += 2) {\n          result.set(i, even.get(i / 2));\n      }\n      return result;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def sortEven(l):\n    even = []\n    for i in range(0, len(l), 2):\n        even.append(l[i])\n    even.sort()\n    result = l\n    for i in range(0, len(l), 2):\n        result[i] = even[i // 2]\n    return result"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> sortEven(List<Integer> l) {\n      List<Integer> even = new ArrayList<>();\n      for (int i = 0; i < l.size(); i += 2) {\n          even.add(l.get(i));\n      }\n      Collections.sort(even);\n      List<Integer> result = l;\n      for (int i = 0; i < l.size(); i += 2) {\n          result.set(i, even.get(i / 2));\n      }\n      return result;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.721656560897827,
+                    "generated": "def sortEven(l):\n    even = []\n    for i in range(0, len(l), 2):\n        even.append(l[i])\n    even.sort()\n    result = l\n    for i in range(0, len(l), 2):\n        result[i] = even[i // 2]\n    return result"
+                }
+            ],
+            "completion_token_num": 79,
+            "errcode": 0,
+            "prompt_token_num": 156
+        },
+        "process_time": 1.0427844524383545,
+        "task_id": "645676f4e70fd10b7aefd4f7",
+        "updated_at": "Sat, 06 May 2023 15:49:09 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 37
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:09 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String encodeCyclic(String s) {\n      List<String> groups = new ArrayList<>();\n      for (int i = 0; i < s.length(); i += 3) {\n          groups.add(s.substring(i, Math.min(i + 3, s.length())));\n      }\n      for (int i = 0; i < groups.size(); i++) {\n          if (groups.get(i).length() == 3) {\n              groups.set(i, groups.get(i).substring(1) + groups.get(i).charAt(0));\n          }\n      }\n      return String.join(\"\", groups);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def encodeCyclic(s):\n    s = list(s)\n    for i in range(3, len(s), 3):\n        s[i] = s[i - 2]\n        s[i - 2] = s[i - 1]\n        s[i - 1] = s[i]\n    return \"\".join(s)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String encodeCyclic(String s) {\n      List<String> groups = new ArrayList<>();\n      for (int i = 0; i < s.length(); i += 3) {\n          groups.add(s.substring(i, Math.min(i + 3, s.length())));\n      }\n      for (int i = 0; i < groups.size(); i++) {\n          if (groups.get(i).length() == 3) {\n              groups.set(i, groups.get(i).substring(1) + groups.get(i).charAt(0));\n          }\n      }\n      return String.join(\"\", groups);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -17.505008697509766,
+                    "generated": "def encodeCyclic(s):\n    s = list(s)\n    for i in range(3, len(s), 3):\n        s[i] = s[i - 2]\n        s[i - 2] = s[i - 1]\n        s[i - 1] = s[i]\n    return \"\".join(s)"
+                }
+            ],
+            "completion_token_num": 81,
+            "errcode": 0,
+            "prompt_token_num": 186
+        },
+        "process_time": 1.104494333267212,
+        "task_id": "645676f5eacb0b74c9805eae",
+        "updated_at": "Sat, 06 May 2023 15:49:10 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 38
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:10 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int primeFib(int n) {\n      int f0 = 0, f1 = 1;\n      while (true) {\n          int p = f0 + f1;\n          boolean is_prime = p >= 2;\n          for (int k = 2; k < Math.min(Math.sqrt(p) + 1, p - 1); k++) {\n              if (p % k == 0) {\n                  is_prime = false;\n                  break;\n              }\n          }\n          if (is_prime) {\n              n -= 1;\n          }\n          if (n == 0) {\n              return p;\n          }\n          f0 = f1;\n          f1 = p;\n      }\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def primeFib(n):\n    f0 = f1 = 0\n    while True:\n        p = f0 + f1\n        is_prime = p >= 2\n        for k in range(2, min(int(p ** (0.5)) + 1, p - 1)):\n            if (p % k == 0):\n                is_prime = False\n                break\n        if (is_prime):\n            n -= 1\n        if (n == 0):\n            return p\n        f0 = f1\n        f1 = p\nn = 50\nprint(primeFib(n))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int primeFib(int n) {\n      int f0 = 0, f1 = 1;\n      while (true) {\n          int p = f0 + f1;\n          boolean is_prime = p >= 2;\n          for (int k = 2; k < Math.min(Math.sqrt(p) + 1, p - 1); k++) {\n              if (p % k == 0) {\n                  is_prime = false;\n                  break;\n              }\n          }\n          if (is_prime) {\n              n -= 1;\n          }\n          if (n == 0) {\n              return p;\n          }\n          f0 = f1;\n          f1 = p;\n      }\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -18.48373031616211,
+                    "generated": "def primeFib(n):\n    f0 = f1 = 0\n    while True:\n        p = f0 + f1\n        is_prime = p >= 2\n        for k in range(2, min(int(p ** (0.5)) + 1, p - 1)):\n            if (p % k == 0):\n                is_prime = False\n                break\n        if (is_prime):\n            n -= 1\n        if (n == 0):\n            return p\n        f0 = f1\n        f1 = p\nn = 50\nprint(primeFib(n))"
+                }
+            ],
+            "completion_token_num": 143,
+            "errcode": 0,
+            "prompt_token_num": 202
+        },
+        "process_time": 3.183847427368164,
+        "task_id": "645676f66022dd21e1fdd75f",
+        "updated_at": "Sat, 06 May 2023 15:49:14 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 39
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:14 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean triplesSumToZero(List<Integer> l) {\n      for (int i = 0; i < l.size(); i++) {\n          for (int j = i + 1; j < l.size(); j++) {\n              for (int k = j + 1; k < l.size(); k++) {\n                  if (l.get(i) + l.get(j) + l.get(k) == 0) {\n                      return true;\n                  }\n              }\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def triplesSumToZero(l):\n    for i in range(len(l)):\n        for j in range(i + 1, len(l)):\n            for k in range(j + 1, len(l)):\n                if l[i] + l[j] + l[k] == 0:\n                    return True\n    return False"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean triplesSumToZero(List<Integer> l) {\n      for (int i = 0; i < l.size(); i++) {\n          for (int j = i + 1; j < l.size(); j++) {\n              for (int k = j + 1; k < l.size(); k++) {\n                  if (l.get(i) + l.get(j) + l.get(k) == 0) {\n                      return true;\n                  }\n              }\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -1.2813001871109009,
+                    "generated": "def triplesSumToZero(l):\n    for i in range(len(l)):\n        for j in range(i + 1, len(l)):\n            for k in range(j + 1, len(l)):\n                if l[i] + l[j] + l[k] == 0:\n                    return True\n    return False"
+                }
+            ],
+            "completion_token_num": 84,
+            "errcode": 0,
+            "prompt_token_num": 158
+        },
+        "process_time": 2.354238271713257,
+        "task_id": "645676faad58a5c55889eed5",
+        "updated_at": "Sat, 06 May 2023 15:49:16 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 40
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:16 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int carRaceCollision(int n) {\n      return n * n;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def carRaceCollision(n):\n    return n * n\nif __name__ == \"__main__\":\n    print(carRaceCollision(9))\n"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int carRaceCollision(int n) {\n      return n * n;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -7.347195625305176,
+                    "generated": "def carRaceCollision(n):\n    return n * n\nif __name__ == \"__main__\":\n    print(carRaceCollision(9))\n"
+                }
+            ],
+            "completion_token_num": 37,
+            "errcode": 0,
+            "prompt_token_num": 47
+        },
+        "process_time": 0.9953293800354004,
+        "task_id": "645676fc6728764704fb8913",
+        "updated_at": "Sat, 06 May 2023 15:49:17 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 41
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:17 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> incrList(List<Integer> l) {\n      return l.stream().map(p -> p + 1).collect(Collectors.toList());\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def incrList(l):\n    return [x + 1 for x in l]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public List<Integer> incrList(List<Integer> l) {\n      return l.stream().map(p -> p + 1).collect(Collectors.toList());\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.442538022994995,
+                    "generated": "def incrList(l):\n    return [x + 1 for x in l]"
+                }
+            ],
+            "completion_token_num": 19,
+            "errcode": 0,
+            "prompt_token_num": 68
+        },
+        "process_time": 0.5537817478179932,
+        "task_id": "645676fd0503b38401f47543",
+        "updated_at": "Sat, 06 May 2023 15:49:18 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 42
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:18 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean pairsSumToZero(List<Integer> l) {\n      for (int i = 0; i < l.size(); i++) {\n          for (int j = i + 1; j < l.size(); j++) {\n              if (l.get(i) + l.get(j) == 0) {\n                  return true;\n              }\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def pairsSumToZero(l):\n    return [i for i, num in enumerate(l) if num + l[i] == 0]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean pairsSumToZero(List<Integer> l) {\n      for (int i = 0; i < l.size(); i++) {\n          for (int j = i + 1; j < l.size(); j++) {\n              if (l.get(i) + l.get(j) == 0) {\n                  return true;\n              }\n          }\n      }\n      return false;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -8.007824897766113,
+                    "generated": "def pairsSumToZero(l):\n    return [i for i, num in enumerate(l) if num + l[i] == 0]"
+                }
+            ],
+            "completion_token_num": 33,
+            "errcode": 0,
+            "prompt_token_num": 124
+        },
+        "process_time": 0.45422959327697754,
+        "task_id": "645676fe758c717acdfdda7c",
+        "updated_at": "Sat, 06 May 2023 15:49:18 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 43
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:19 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String changeBase(int x, int base) {\n      StringBuilder ret = new StringBuilder();\n      while (x > 0) {\n          ret.append(String.valueOf(x % base));\n          x /= base;\n      }\n      return ret.reverse().toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import math\ndef changeBase(x, base1):\n    return int(math.pow(x, 1.0/float(base1)))"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String changeBase(int x, int base) {\n      StringBuilder ret = new StringBuilder();\n      while (x > 0) {\n          ret.append(String.valueOf(x % base));\n          x /= base;\n      }\n      return ret.reverse().toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -14.28543758392334,
+                    "generated": "import math\ndef changeBase(x, base1):\n    return int(math.pow(x, 1.0/float(base1)))"
+                }
+            ],
+            "completion_token_num": 33,
+            "errcode": 0,
+            "prompt_token_num": 95
+        },
+        "process_time": 0.44661402702331543,
+        "task_id": "645676fff91776fc8489e335",
+        "updated_at": "Sat, 06 May 2023 15:49:19 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 44
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:19 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public double triangleArea(double a, double h) {\n      return a * h / 2;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def triangleArea(a, h):\n    return a * h / 2"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public double triangleArea(double a, double h) {\n      return a * h / 2;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -0.5483376383781433,
+                    "generated": "def triangleArea(a, h):\n    return a * h / 2"
+                }
+            ],
+            "completion_token_num": 16,
+            "errcode": 0,
+            "prompt_token_num": 50
+        },
+        "process_time": 0.23182272911071777,
+        "task_id": "645676ff1372543c2a805aa5",
+        "updated_at": "Sat, 06 May 2023 15:49:19 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 45
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:20 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int fib4(int n) {\n      List<Integer> results = new ArrayList<>();\n      results.add(0);\n      results.add(0);\n      results.add(2);\n      results.add(0);\n      if (n < 4) {\n          return results.get(n);\n      }\n      for (int i = 4; i <= n; i++) {\n          results.add(results.get(0) + results.get(1) + results.get(2) + results.get(3));\n          results.remove(0);\n      }\n      return results.get(3);\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def fib4(n):\n    memo = {0: 0, 1: 1, 2: 1}\n    for i in range(3, n + 1):\n        memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3]\n    return memo[n]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int fib4(int n) {\n      List<Integer> results = new ArrayList<>();\n      results.add(0);\n      results.add(0);\n      results.add(2);\n      results.add(0);\n      if (n < 4) {\n          return results.get(n);\n      }\n      for (int i = 4; i <= n; i++) {\n          results.add(results.get(0) + results.get(1) + results.get(2) + results.get(3));\n          results.remove(0);\n      }\n      return results.get(3);\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -6.325120449066162,
+                    "generated": "def fib4(n):\n    memo = {0: 0, 1: 1, 2: 1}\n    for i in range(3, n + 1):\n        memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3]\n    return memo[n]"
+                }
+            ],
+            "completion_token_num": 72,
+            "errcode": 0,
+            "prompt_token_num": 174
+        },
+        "process_time": 0.9661486148834229,
+        "task_id": "64567700038cbdb191fdd696",
+        "updated_at": "Sat, 06 May 2023 15:49:20 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 46
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:21 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public double median(List<Integer> l) {\n      List<Integer> list = l;\n      Collections.sort(list);\n      if (l.size() % 2 == 1) {\n          return l.get(l.size() / 2);\n      } else {\n          return (l.get(l.size() / 2 - 1) + l.get(l.size() / 2)) / 2.0;\n      }\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "import bisect\ndef median(l):\n    return bisect.bisect_left(l, (len(l) + 1) / 2)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public double median(List<Integer> l) {\n      List<Integer> list = l;\n      Collections.sort(list);\n      if (l.size() % 2 == 1) {\n          return l.get(l.size() / 2);\n      } else {\n          return (l.get(l.size() / 2 - 1) + l.get(l.size() / 2)) / 2.0;\n      }\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -9.264272689819336,
+                    "generated": "import bisect\ndef median(l):\n    return bisect.bisect_left(l, (len(l) + 1) / 2)"
+                }
+            ],
+            "completion_token_num": 33,
+            "errcode": 0,
+            "prompt_token_num": 129
+        },
+        "process_time": 0.47183775901794434,
+        "task_id": "645677016728764704fb8915",
+        "updated_at": "Sat, 06 May 2023 15:49:21 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 47
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:21 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPalindrome(String text) {\n      for (int i = 0; i < text.length(); i++) {\n          if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def isPalindrome(text):\n    return text == text[::-1]"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean isPalindrome(String text) {\n      for (int i = 0; i < text.length(); i++) {\n          if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -0.8133403658866882,
+                    "generated": "def isPalindrome(text):\n    return text == text[::-1]"
+                }
+            ],
+            "completion_token_num": 19,
+            "errcode": 0,
+            "prompt_token_num": 102
+        },
+        "process_time": 0.27781009674072266,
+        "task_id": "64567701d14d607439fdd7da",
+        "updated_at": "Sat, 06 May 2023 15:49:21 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 48
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:22 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public int modp(int n, int p) {\n      int ret = 1;\n      for (int i = 0; i < n; i++) {\n          ret = (ret * 2) % p;\n      }\n      return ret;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def modp(n, p):\n    ret = 1\n    for i in range(n):\n        ret = (ret * 2) % p\n    return ret"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public int modp(int n, int p) {\n      int ret = 1;\n      for (int i = 0; i < n; i++) {\n          ret = (ret * 2) % p;\n      }\n      return ret;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -1.2733240127563477,
+                    "generated": "def modp(n, p):\n    ret = 1\n    for i in range(n):\n        ret = (ret * 2) % p\n    return ret"
+                }
+            ],
+            "completion_token_num": 37,
+            "errcode": 0,
+            "prompt_token_num": 84
+        },
+        "process_time": 0.8460683822631836,
+        "task_id": "64567702d1f855cc52efd708",
+        "updated_at": "Sat, 06 May 2023 15:49:22 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 49
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:22 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String encodeShift(String s) {\n      StringBuilder sb = new StringBuilder();\n      for (char ch : s.toCharArray()) {\n          sb.append((char) ('a' + ((ch + 5 - 'a') % 26)));\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def encodeShift(S):\n    S = [i for i in S]\n    for i in range(len(S)):\n        S[i] = chr(ord(S[i]) + 5 - ord('a'))\n    return \"\".join(S)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String encodeShift(String s) {\n      StringBuilder sb = new StringBuilder();\n      for (char ch : s.toCharArray()) {\n          sb.append((char) ('a' + ((ch + 5 - 'a') % 26)));\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -9.684517860412598,
+                    "generated": "def encodeShift(S):\n    S = [i for i in S]\n    for i in range(len(S)):\n        S[i] = chr(ord(S[i]) + 5 - ord('a'))\n    return \"\".join(S)"
+                }
+            ],
+            "completion_token_num": 62,
+            "errcode": 0,
+            "prompt_token_num": 99
+        },
+        "process_time": 1.6896045207977295,
+        "task_id": "645677026dc7a0ac0d9556e8",
+        "updated_at": "Sat, 06 May 2023 15:49:24 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 50
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:24 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public String removeVowels(String text) {\n      StringBuilder sb = new StringBuilder();\n      for (char ch : text.toCharArray()) {\n          if (\"aeiou\".indexOf(Character.toLowerCase(ch)) == -1) {\n              sb.append(ch);\n          }\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def removeVowels(text):\n    vowels = \"aeiou\"\n    return \"\".join([x for x in text if x.lower() not in vowels])"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public String removeVowels(String text) {\n      StringBuilder sb = new StringBuilder();\n      for (char ch : text.toCharArray()) {\n          if (\"aeiou\".indexOf(Character.toLowerCase(ch)) == -1) {\n              sb.append(ch);\n          }\n      }\n      return sb.toString();\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -8.722297668457031,
+                    "generated": "def removeVowels(text):\n    vowels = \"aeiou\"\n    return \"\".join([x for x in text if x.lower() not in vowels])"
+                }
+            ],
+            "completion_token_num": 41,
+            "errcode": 0,
+            "prompt_token_num": 113
+        },
+        "process_time": 1.0828723907470703,
+        "task_id": "6456770408e84dccc6efdb2a",
+        "updated_at": "Sat, 06 May 2023 15:49:25 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 51
+}{
+    "message": "success",
+    "result": {
+        "app": "multilingual_code_translate",
+        "created_at": "Sat, 06 May 2023 15:49:25 GMT",
+        "input": {
+            "dst_lang": "Python",
+            "n": 1,
+            "src_lang": "Java",
+            "stop": [],
+            "text": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean belowThreshold(List<Integer> l, int t) {\n      for (int e : l) {\n          if (e >= t) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n"
+        },
+        "output": {
+            "code": [
+                "def belowThreshold(l, t):\n    return any(e >= t for e in l)"
+            ],
+            "code_dict": [
+                {
+                    "context": "code translation\nJava:\npublic static void main(String args[]){\n  public boolean belowThreshold(List<Integer> l, int t) {\n      for (int e : l) {\n          if (e >= t) {\n              return false;\n          }\n      }\n      return true;\n  }\n  \n}\nPython:\n",
+                    "cum_log_probs": -2.261620044708252,
+                    "generated": "def belowThreshold(l, t):\n    return any(e >= t for e in l)"
+                }
+            ],
+            "completion_token_num": 22,
+            "errcode": 0,
+            "prompt_token_num": 81
+        },
+        "process_time": 0.6548721790313721,
+        "task_id": "6456770508e84dccc6efdb2c",
+        "updated_at": "Sat, 06 May 2023 15:49:26 GMT",
+        "user": {
+            "appId": "fbfa0673febe4aea9031882c2b3565ea",
+            "id": "645217f6b70c95bf8ebc4949",
+            "name": ""
+        }
+    },
+    "status": 0,
+    "id": 52
+}
