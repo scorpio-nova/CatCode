@@ -81,13 +81,13 @@ run_test_api.sh
 
 - morphism identification
 
-  <img src="/Users/serena/Documents/CatCode/diagrams/exp1_morphism_identification.png" alt="exp1_morphism_identification" style="zoom: 33%;" /> 
+  <img src="./diagrams/exp1_morphism_identification.png" alt="exp1_morphism_identification" style="zoom: 33%;" /> 
 
 - translation functor
 
-  <img src="/Users/serena/Documents/CatCode/diagrams/exp2_translation_functor.png" alt="exp2_translation_functor" style="zoom:33%;" />  
+  <img src="./diagrams/exp2_translation_functor.png" alt="exp2_translation_functor" style="zoom:33%;" />  
 
 - reproduction functor
 
-  <img src="/Users/serena/Documents/CatCode/diagrams/exp3_reproduction_functor.png" alt="exp3_reproduction_functor" style="zoom:33%;" /> 
+  <img src="./diagrams/exp3_reproduction_functor.png" alt="exp3_reproduction_functor" style="zoom:33%;" /> 
 

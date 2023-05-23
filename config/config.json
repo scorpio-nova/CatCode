@@ -1,0 +1,46 @@
+{
+  "OPENAI_API_KEY": "",
+  "API_BASE_URL": "https://api.openai.com/v1/engines/davinci-codex/completions",
+  "CODEGEEX_API_KEY": "",
+  "CODEGEEX_API_SECRET": "",
+  "supported_models": ["text-davinci-003","gpt-3.5-turbo-0301"],
+  "morphismPath": "../../data/categorical_data/sampled_data",
+  "functorPath": "../../data/categorical_data/morphism_output",
+  "functorHeaderPath": "../../data/supportive_data/function_headers",
+  "datasets": [
+    "humaneval",
+    "MathQA",
+    "mbxp"
+  ],
+  "dataset_sizes": [
+    164,
+    1883,
+    974
+  ],
+  "global_dataset": "code_contest",
+  "sourceType": "NoTransform",
+  "transformedTypes": [
+    "BooleanExchange",
+    "LoopExchange",
+    "ModifyCondition",
+    "PermuteStatement",
+    "RemoveElse",
+    "ReorderCondition",
+    "SwitchToIf",
+    "UnusedStatement",
+    "VariableRenaming"
+  ],
+  "eqTypes": [
+    "BooleanExchange",
+    "LoopExchange",
+    "PermuteStatement",
+    "ReorderCondition",
+    "SwitchToIf",
+    "UnusedStatement",
+    "VariableRenaming"
+  ],
+  "uneqTypes": [
+    "ModifyCondition",
+    "RemoveElse"
+  ]
+}
